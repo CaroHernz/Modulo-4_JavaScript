@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:sans-serif;
+    background-color: rgb(236, 236, 236);
+    background-repeat: repeat;
+    background-image: url('https://p.kindpng.com/picc/s/680-6802464_gritter-cute-kawaii-png-transparent-pink-pastelcolours-pattern.png');
+}
+.bodyTarea2Act1 {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/039/845/859/non_2x/banknote-seamless-pattern-flat-design-illustration-exchange-cash-illustration-on-green-isolated-background-banknote-bill-seamless-pattern-business-concept-vector.jpg');
+
+}
+.bodyTarea2Act2 {
+    background-image: url('https://img.freepik.com/premium-vector/seamless-childish-pattern-with-hand-drawn-houses-yellow-gray-white-background-creative-kids-city-illustration_103291-198.jpg');
+
+}
+.bodyTarea3Act1 {
+    background-image: url('https://img.freepik.com/premium-vector/vintage-s-style-seamless-pattern-with-words_807082-1354.jpg?semt=ais_hybrid&w=740');
+
+}
+.bodyTarea3Act2 {
+    background-image: url('https://img.freepik.com/premium-vector/minimalist-seamless-pattern-with-cute-beige-brown-flowers_197792-5731.jpg');
+
+}
+.bodyTarea3Act3 {
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20221031/pngtree-seamless-pattern-with-tennis-rackets-and-balls-image_1426765.jpg');
+
+}
+h3 {
+    font-size: 2rem;
+    color: gray;
+}
+.tarea {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid lightgray;
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+    background-color: white;
+    padding: 1rem 2rem;
+    margin: 0;    
+    text-align: center;
+}
+input {
+    padding: 1rem;
+    width: 100%;
+}
+input:focus {
+    border: 2px solid slategray;
+    outline: none; 
+}
+button {
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: lightslategray;
+    color: white;
+}
+button:active {
+    background-color: slategray;
+
+}
+
+.resultado {
+    color: lightslategray;
+    font-size: 1.5rem;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+    padding: 1rem;
+}
