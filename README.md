@@ -21,6 +21,7 @@ Para optar a este beneficio, se debe cumplir lo siguiente:
 
 #### Solución:
 Se desarrolla una función que recibe los datos (nombre, edad, cédul de identidad, monto de ahorro y Registro Social de Hogares), los que se validan de forma tal que entrega un mensaje personalizado en caso de que cumpla o no con los parámetros entregados.
+
 ----
 
 ## Actividad 3
