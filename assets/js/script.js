@@ -34,7 +34,7 @@ const problemas = {
     <h3>Problema 2: Subsidio de Arriendo de Vivienda</h3>
     <div>
         <label for="name">Nombre Completo: </label>
-        <input type="name" id="name" placeholder="Ingrese su nombre completo" required>
+        <input type="text" id="name" placeholder="Ingrese su nombre completo" required>
     </div>
     <div>
         <label for="edad">Edad: </label>
