@@ -210,33 +210,27 @@ function calcularDolar(monto) {
 function evaluarSubsidio(edad,cedula,ahorro,rsh) {
     const cedulaValida = /^[0-9]{7,9}$/.test(cedula);
 
-    if (edad >= 18) {
-        if (cedulaValida) {
-            if (ahorro >= 4 && ahorro != 0) {
-                if (rsh <=70) {
-                    console.log('Cumple con los requisitos');
-                    return {mensaje: '¡Felicidades! Cumples con los requisitos para postular al Subsidio de Arriendo de Vivienda'}
-                }
-                else {
-                    console.log('No pertenece al 70% más vulnerable');
-                    return {mensaje: 'No pertenece al 70% más vulnerable'}
-                }
-            }
-            else {
-                console.log('Ahorro mínimo insuficiente');
-                return {mensaje: 'No cumple con el ahorro mínimo requerido'}
-            }
-        }
-        else {
-            console.log('Cédula de identidad no vigente');
-            return {mensaje: 'Cédula de identidad no vigente'}
-        }
-    }
-    else {
+    if (edad < 18) {
         console.log('No cumple requisito de edad mínima');
         return {mensaje: 'No cumples con el requisito de edad mínima para postular'}
-
     }
+    if (!cedulaValida) {
+        console.log('Cédula de identidad no vigente');
+        return {mensaje: 'Cédula de identidad no vigente'}
+        }
+
+    if (ahorro < 4 || ahorro == 0) {
+        console.log('Ahorro mínimo insuficiente');
+        return {mensaje: 'No cumple con el ahorro mínimo requerido'}
+    }
+
+    if (rsh > 70) {
+        console.log('No pertenece al 70% más vulnerable');
+        return {mensaje: 'No pertenece al 70% más vulnerable'}
+    }
+    
+    console.log('Cumple con los requisitos');
+    return {mensaje: '¡Felicidades! Cumples con los requisitos para postular al Subsidio de Arriendo de Vivienda'}
 }
 
 //Tarea 3 Problema 1
