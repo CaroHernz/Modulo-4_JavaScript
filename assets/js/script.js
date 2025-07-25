@@ -76,12 +76,8 @@ const problemas = {
                     resultadoSubsidio.textContent = 'Ingrese un valor válido';
                     return;
                 }
-                const resultado = evaluarSubsidio({
-                    edad: edad,
-                    cedula: cedula,
-                    ahorro: ahorro,
-                    rsh: rsh
-                }  
+                const resultado = evaluarSubsidio(
+                    edad,cedula,ahorro,rsh
                 );
                 resultadoSubsidio.textContent = resultado.mensaje;
             }
@@ -211,9 +207,10 @@ function calcularDolar(monto) {
 }
 
 //Tarea 2 Problema 2
-function evaluarSubsidio({edad,cedula,ahorro,rsh}) {
+function evaluarSubsidio(edad,cedula,ahorro,rsh) {
+    const cedulaValida = /^[0-9]{7,9}$/.test(cedula);
+
     if (edad >= 18) {
-        const cedulaValida = /^[0-9]{7,9}$/.test(cedula);
         if (cedulaValida) {
             if (ahorro >= 4 && ahorro != 0) {
                 if (rsh <=70) {
@@ -237,7 +234,7 @@ function evaluarSubsidio({edad,cedula,ahorro,rsh}) {
     }
     else {
         console.log('No cumple requisito de edad mínima');
-        return {mensaje: 'No comples con el requisito de edad mínima para postular'}
+        return {mensaje: 'No cumples con el requisito de edad mínima para postular'}
 
     }
 }
