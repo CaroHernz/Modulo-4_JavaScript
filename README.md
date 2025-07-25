@@ -47,3 +47,10 @@ Se desarrolla un algoritmo que recibe 2 variables, sets del jugador A y los sets
 - *"El juego aún no termina"* en caso de que ningún jugador ganará 6 sets y/o cuando un jugador aún no haya ganado por lo menos 2 juegos más que el rival.
 - *"El ganador es A o B"* según corresponda.
 - *"Resultado inválido"* en casos de ejemplo como 8-6 o 7-3.
+  
+----
+
+#### Creado por
+<p align="center"> 
+  <a href="https://github.com/CaroHernz">Carolina Hernández</a>
+</p>
