@@ -1,4 +1,95 @@
 const problemas = {
+    'act2problema1':{
+        html:`
+        <div class="problema-content">
+    <h3>Problema 1: Calculadora de Dólares a Peso chileno</h3>
+    <div>
+        <label for="dolar">Dólares: </label>
+        <input type="number" id="dolar" placeholder="Ingrese su monto en dólares" min="0" required>
+    </div>
+    <button class="btn-problema" type="submit" id="ingresaDolar">Calcular</button>
+    <div  class="resultado" id="resultadoDolar"></div>
+    </div>`,
+        script:  function () {
+            const buttonDolar = document.getElementById('ingresaDolar');
+            const montoDolar = document.getElementById('dolar');
+            const resultadoDolar = document.getElementById('resultadoDolar');
+
+            function evaluarDolar() {
+                const monto = parseInt(montoDolar.value);
+                if (isNaN(monto)|| monto < 0) {
+                    resultadoDolar.textContent = 'Ingrese un monto válido';
+                    return;
+                }
+                const resultado = calcularDolar(monto);
+                resultadoDolar.textContent = resultado.mensaje;
+            }
+            buttonDolar.addEventListener('click', evaluarDolar);
+        },
+        background: "url('https://previews.123rf.com/images/luplupme/luplupme1709/luplupme170900122/86851159-cartoon-illustration-of-dollar-currency-symbol-vector-pattern-bank-finance-business-seamless-money.jpg')"
+    },
+    'act2problema2': {
+        html:`
+        <div class="problema-content">
+    <h3>Problema 2: Subsidio de Arriendo de Vivienda</h3>
+    <div>
+        <label for="name">Nombre Completo: </label>
+        <input type="name" id="name" placeholder="Ingrese su nombre completo" required>
+    </div>
+    <div>
+        <label for="edad">Edad: </label>
+        <input type="number" id="edad" placeholder="Ingrese su edad" min = "1">
+    </div>
+    <div>
+        <label for="cedula">Cédula de identidad: </label>
+        <input type="number" id="cedula" placeholder="Ingrese su cédula de identidad vigente" min = "1">
+    </div>
+    <div>
+        <label for="ahorro">Monto de ahorro para la vivienda (UF): </label>
+        <input type="number" id="ahorro" placeholder="Ingrese su ahorro en UF" min = "1">
+    </div>
+    <div>
+        <label for="rsh">Registro Social de Hogares: </label>
+        <input type="number" id="rsh" placeholder="Ingrese su % en el RSH" min = "1">
+    </div>
+    <button class="btn-problema" type="submit" id="ingresaSubsidio">Ingresar</button>
+    <div  class="resultado" id="resultadoSubsidio"></div>
+    </div>`,
+        script: function () {
+            const buttonSubsidio = document.getElementById('ingresaSubsidio');
+            const edadSubsidio = document.getElementById('edad');
+            const cedulaSubsidio = document.getElementById('cedula');
+            const ahorroSubsidio = document.getElementById('ahorro');
+            const rshSubsidio = document.getElementById('rsh');
+            const resultadoSubsidio = document.getElementById('resultadoSubsidio');
+        
+            function validacionDatos () {
+                const edad = parseInt(edadSubsidio.value);
+                const cedula = parseInt(cedulaSubsidio.value);
+                const ahorro = parseInt(ahorroSubsidio.value);
+                const rsh = parseInt(rshSubsidio.value);
+        
+                if ((isNaN(edad) || edad <=0) || 
+                    (isNaN(cedula) || cedula <=0)|| 
+                    (isNaN(ahorro) || ahorro <=0)|| 
+                    (isNaN(rsh) || rsh <= 0)) {
+                    resultadoSubsidio.textContent = 'Ingrese un valor válido';
+                    return;
+                }
+                const resultado = evaluarSubsidio({
+                    edad: edad,
+                    cedula: cedula,
+                    ahorro: ahorro,
+                    rsh: rsh
+                }  
+                );
+                resultadoSubsidio.textContent = resultado.mensaje;
+            }
+            buttonSubsidio.addEventListener('click', validacionDatos);
+        
+        },
+        background: "url('https://cbx-prod.b-cdn.net/COLOURBOX22063142.jpg?width=800&height=800&quality=70')"
+    },
     'act3problema1': {
         html: `
         <div class="problema-content">
@@ -72,7 +163,7 @@ const problemas = {
         </div>
         <button class="btn-problema" type="submit" id="ingresaJuegos">Ingresar</button>
         <div  class="resultado" id="resultadosJuegos"></div>
-</div>
+    </div>
     `, script: function () {
             const buttonCalcular = document.getElementById('ingresaJuegos');
             const resultadoTenis = document.getElementById('resultadosJuegos');
@@ -108,6 +199,46 @@ function loadTarea(problemaId) {
     else {
         container.innerHTML = '<p>Problema no disponible</p>';
         body.style.backgroundImage = '';
+    }
+}
+
+//Tarea 2 Problema 1
+function calcularDolar(monto) {
+    const tipoCambio = 745;
+    const cambio = monto * tipoCambio;
+    console.log(`${monto} USD equivalen a ${cambio} pesos chilenos`);
+    return { mensaje: `${monto.toLocaleString()} USD equivalen a ${cambio.toLocaleString()} pesos chilenos`}
+}
+
+//Tarea 2 Problema 2
+function evaluarSubsidio({edad,cedula,ahorro,rsh}) {
+    if (edad >= 18) {
+        const cedulaValida = /^[0-9]{7,9}$/.test(cedula);
+        if (cedulaValida) {
+            if (ahorro >= 4 && ahorro != 0) {
+                if (rsh <=70) {
+                    console.log('Cumple con los requisitos');
+                    return {mensaje: '¡Felicidades! Cumples con los requisitos para postular al Subsidio de Arriendo de Vivienda'}
+                }
+                else {
+                    console.log('No pertenece al 70% más vulnerable');
+                    return {mensaje: 'No pertenece al 70% más vulnerable'}
+                }
+            }
+            else {
+                console.log('Ahorro mínimo insuficiente');
+                return {mensaje: 'No cumple con el ahorro mínimo requerido'}
+            }
+        }
+        else {
+            console.log('Cédula de identidad no vigente');
+            return {mensaje: 'Cédula de identidad no vigente'}
+        }
+    }
+    else {
+        console.log('No cumple requisito de edad mínima');
+        return {mensaje: 'No comples con el requisito de edad mínima para postular'}
+
     }
 }
 
@@ -179,6 +310,3 @@ function ganadorTenis(juegosA, juegosB) {
         return { mensaje: 'Resultado inválido' }
     }
 }
-
-
-
