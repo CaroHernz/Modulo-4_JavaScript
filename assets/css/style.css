@@ -1,39 +1,62 @@
 * {
     margin: 0;
-    padding: 2rem;
+    padding: 0;
     box-sizing: border-box;
 }
-body {
+#bodyIndex {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     font-family:sans-serif;
     background-color: rgb(236, 236, 236);
     background-repeat: repeat;
     background-image: url('https://p.kindpng.com/picc/s/680-6802464_gritter-cute-kawaii-png-transparent-pink-pastelcolours-pattern.png');
 }
-.bodyTarea2Act1 {
-    background-image: url('https://static.vecteezy.com/system/resources/previews/039/845/859/non_2x/banknote-seamless-pattern-flat-design-illustration-exchange-cash-illustration-on-green-isolated-background-banknote-bill-seamless-pattern-business-concept-vector.jpg');
 
+.navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray;
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem;
 }
-.bodyTarea2Act2 {
-    background-image: url('https://img.freepik.com/premium-vector/seamless-childish-pattern-with-hand-drawn-houses-yellow-gray-white-background-creative-kids-city-illustration_103291-198.jpg');
-
+.dropdown {
+    float: left;
+    overflow: hidden;
 }
-.bodyTarea3Act1 {
-    background-image: url('https://img.freepik.com/premium-vector/vintage-s-style-seamless-pattern-with-words_807082-1354.jpg?semt=ais_hybrid&w=740');
-
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: darkslategrey;
+    padding: 0.5rem 1rem;
+    background-color: inherit;
+    margin:0
 }
-.bodyTarea3Act2 {
-    background-image: url('https://img.freepik.com/premium-vector/minimalist-seamless-pattern-with-cute-beige-brown-flowers_197792-5731.jpg');
-
+.dropdown:hover {
+    text-decoration: underline
 }
-.bodyTarea3Act3 {
-    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20221031/pngtree-seamless-pattern-with-tennis-rackets-and-balls-image_1426765.jpg');
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
 
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+h1 {
+    font-size: 1.8rem;
 }
 h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: gray;
 }
 .tarea {
@@ -44,8 +67,9 @@ h3 {
     box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
     background-color: white;
     padding: 1rem 2rem;
-    margin: 0;    
+    margin: 2rem;    
     text-align: center;
+    line-height: 2;
 }
 input {
     padding: 1rem;
@@ -55,7 +79,15 @@ input:focus {
     border: 2px solid slategray;
     outline: none; 
 }
-button {
+.btn-tarea {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+
+
+}
+.btn-problema {
     margin: 0.5rem auto;
     padding: 0.5rem 1rem;
     border-radius: 5px;

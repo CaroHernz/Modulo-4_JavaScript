@@ -9,22 +9,35 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bodyIndex">
-    <div class="tarea">
-        <h1>Módulo 4</h1>
-        <div>
-            <h3>Actividad 2</h3>
-            <a href="Tarea 2 actividad 1.html">Problema 1</a> |
-            <a href="Tarea 2 actividad 2.html">Problema 2</a> 
+<body id="bodyIndex">
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="navbar__title">
+                <h1>Modulo 4</h1>
+                <p><small>Seleccione una tarea para visualizarla:</small></p>
+            </div>
+            <div class="dropdown">
+                <h3 class="dropbtn"> Actividad 2</h3>
+                <div class="dropdown-content">
+                    <button class="btn-tarea" onclick="loadTarea('act2problema1')">Problema 1</button>
+                    <button class="btn-tarea" onclick="loadTarea('act2problema2')">Problema 2</button>
+                </div>
+            </div>
+            <div class="dropdown">
+                <h3 class="dropbtn"> Actividad 3</h3>
+                <div class="dropdown-content">
+                    <button class="btn-tarea" onclick="loadTarea('act3problema1')">Problema 1</button>
+                    <button class="btn-tarea" onclick="loadTarea('act3problema2')">Problema 2</button>
+                    <button class="btn-tarea" onclick="loadTarea('act3problema3')">Problema 3</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="tarea">
+        <div class="problema" id="problema">
+            <!--Aquí se cargará la tarea-->
         </div>
-        <div>
-            <h3>Actividad 3</h3>
-            <a href="Tarea 3 actividad 1.html">Problema 1</a> |
-            <a href="Tarea 3 actividad 2.html">Problema 2</a> |
-            <a href="Tarea 3 actividad 3.html">Problema 3</a>
-        </div>
-
-    </div>
+    </main>
     <script src="assets/js/script.js"></script>
 </body>
 
