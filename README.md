@@ -31,7 +31,7 @@ Se desarrolla un algoritmo que recibe un número y retorna un mensaje según cum
 ### Problema 2
 Un año es bisiesto en el calendario Gregoriano si es divisible entre 4 y no divisible entre 100, o bien, si es divisible entre 400.
 #### Solución: 
-Se desarrolla un algoritmo que recibe un número (año) y retorna un mensaje según si corresponde a un año bisiesto o no. 
+Se desarrolla un algoritmo que recibe un número (año) y retorna un mensaje de alerta y en pantalla, según si corresponde a un año bisiesto o no. 
 
 ### Problema 3
 Un periodista llamado Perio Dista, debe relatar un partido de tenis, pero no conoce las reglas del deporte. En particular, no ha logrado aprender cómo saber si un set ya terminó, y quién lo ganó.
@@ -44,6 +44,6 @@ Sabiendo que el jugador A ha ganado m juegos, y el jugador B, n juegos, al perio
 
 #### Solución:
 Se desarrolla un algoritmo que recibe 2 variables, sets del jugador A y los sets del jugador B, el cuál retorna un mensaje acorde a los valores entregados. Estos pueden ser:
-    * "El juego aún no termina" en caso de que el partido aún no complete los 6 juegos o si la diferencia para ganar es inferior a 2 sets
-    * "El ganador es A o B" según corresponda
-    * "Resultado inválido" en caso...
+    * "El juego aún no termina" en caso de que ningún jugador ganará 6 sets y/o cuando un jugador aún no haya ganado por lo menos 2 juegos más que el rival.
+    * "El ganador es A o B" según corresponda.
+    * "Resultado inválido" en casos de ejemplo como 8-6 o 7-3.
