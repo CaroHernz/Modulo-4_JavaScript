@@ -5,10 +5,10 @@ Utilizar variables simples y sentencias condicionales para el control del flujo 
 
 ## Actividad 2
 ### Problema 1
-Le han contratado para crear una función que recibe como parámetros el monto total en dólares de la cuenta corriente de un cliente y devuelve su equivalente en pesos chilenos, considere como tipo de cambio 745.
+Se necesita crear una función que recibe como parámetros el monto total en dólares de la cuenta corriente de un cliente y devuelve su equivalente en pesos chilenos,  considerando como tipo de cambio 745.
 
 #### Solución:
-Construya una pieza de código Javascript para que solo reciba montos correctos, es decir, solo números, tenga consideración que al ser dólares, se podría encontrar con montos que incluyen centavos. 
+Se construye una calculadora que recibe un monto en dolares y retorna un mensaje con el equivalente en pesos chilenos.
 
 ### Problema 2
 El estado de Chile posee un beneficio denominado “Subsidio de arriendo de vivienda”, el cual consiste en un aporte mensual de 4,2 Unidades de Fomento (UF) por un máximo de 170 UF, el cual podrá ser utilizado de manera consecutiva o fragmentada en un plazo de 8 años.
@@ -19,6 +19,8 @@ Para optar a este beneficio, se debe cumplir lo siguiente:
 - Acreditar ahorro mínimo de 4 UF al momento de postular, en una cuenta de ahorro para la vivienda a nombre del postulante, su cónyuge o conviviente civil.
 - Pertenecer hasta el 70% más vulnerable de la población, según la calificación socioeconómica del Registro Social de Hogares.
 
+#### Solución:
+Se desarrolla una función que recibe los datos (nombre, edad, cédul de identidad, monto de ahorro y Registro Social de Hogares), los que se validan de forma tal que entrega un mensaje personalizado en caso de que cumpla o no con los parámetros entregados.
 ----
 
 ## Actividad 3
