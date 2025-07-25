@@ -5,20 +5,19 @@ Utilizar variables simples y sentencias condicionales para el control del flujo 
 
 ## Actividad 2
 ### Problema 1
-#### Contexto: 
 Le han contratado para crear una función que recibe como parámetros el monto total en dólares de la cuenta corriente de un cliente y devuelve su equivalente en pesos chilenos, considere como tipo de cambio 745.
 
-#### Requerimiento:
+#### Solución:
 Construya una pieza de código Javascript para que solo reciba montos correctos, es decir, solo números, tenga consideración que al ser dólares, se podría encontrar con montos que incluyen centavos. 
 
 ### Problema 2
 El estado de Chile posee un beneficio denominado “Subsidio de arriendo de vivienda”, el cual consiste en un aporte mensual de 4,2 Unidades de Fomento (UF) por un máximo de 170 UF, el cual podrá ser utilizado de manera consecutiva o fragmentada en un plazo de 8 años.
 
 Para optar a este beneficio, se debe cumplir lo siguiente:
-    - Ser mayor de 18 años al momento de postular.
-    - Contar con cédula de identidad vigente. Las personas extranjeras deben presentar cédula de identidad para extranjeros.
-    - Acreditar ahorro mínimo de 4 UF al momento de postular, en una cuenta de ahorro para la vivienda a nombre del postulante, su cónyuge o conviviente civil.
-    - Pertenecer hasta el 70% más vulnerable de la población, según la calificación socioeconómica del Registro Social de Hogares.
+- Ser mayor de 18 años al momento de postular.
+- Contar con cédula de identidad vigente. Las personas extranjeras deben presentar cédula de identidad para extranjeros.
+- Acreditar ahorro mínimo de 4 UF al momento de postular, en una cuenta de ahorro para la vivienda a nombre del postulante, su cónyuge o conviviente civil.
+- Pertenecer hasta el 70% más vulnerable de la población, según la calificación socioeconómica del Registro Social de Hogares.
 
 ----
 
@@ -38,12 +37,13 @@ Un periodista llamado Perio Dista, debe relatar un partido de tenis, pero no con
 Un partido de tenis se divide en sets. Para ganar un set, un jugador debe ganar 6 juegos, pero además debe haber ganado por lo menos dos juegos más que su rival. Si el set está empatado a 5 juegos, el ganador es el  primero que llegue a 7. Si el set está empatado a 6 juegos, el set se define en un último juego, en cuyo caso el resultado final es 7-6.
 
 Sabiendo que el jugador A ha ganado m juegos, y el jugador B, n juegos, al periodista le gustaría saber si:
-    * A ganó el set, o
-    * B ganó el set, o
-    * el set todavía no termina, o el resultado es inválido (por ejemplo, 8-6 o 7-3).
+- A ganó el set, o
+- B ganó el set, o
+- el set todavía no termina, o el resultado es inválido (por ejemplo, 8-6 o 7-3).
 
 #### Solución:
 Se desarrolla un algoritmo que recibe 2 variables, sets del jugador A y los sets del jugador B, el cuál retorna un mensaje acorde a los valores entregados. Estos pueden ser:
-    * "El juego aún no termina" en caso de que ningún jugador ganará 6 sets y/o cuando un jugador aún no haya ganado por lo menos 2 juegos más que el rival.
-    * "El ganador es A o B" según corresponda.
-    * "Resultado inválido" en casos de ejemplo como 8-6 o 7-3.
+
+- *"El juego aún no termina"* en caso de que ningún jugador ganará 6 sets y/o cuando un jugador aún no haya ganado por lo menos 2 juegos más que el rival.
+- *"El ganador es A o B"* según corresponda.
+- *"Resultado inválido"* en casos de ejemplo como 8-6 o 7-3.
