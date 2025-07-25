@@ -76,9 +76,13 @@ const problemas = {
                     resultadoSubsidio.textContent = 'Ingrese un valor válido';
                     return;
                 }
-                const resultado = evaluarSubsidio(
-                    edad,cedula,ahorro,rsh
-                );
+                const resultado = evaluarSubsidio({
+                        edad: edad,
+                        cedula: cedula,
+                        ahorro: ahorro,
+                        rsh: rsh
+                    });
+                
                 resultadoSubsidio.textContent = resultado.mensaje;
             }
             buttonSubsidio.addEventListener('click', validacionDatos);
@@ -207,7 +211,7 @@ function calcularDolar(monto) {
 }
 
 //Tarea 2 Problema 2
-function evaluarSubsidio(edad,cedula,ahorro,rsh) {
+function evaluarSubsidio({edad,cedula,ahorro,rsh}) {
     const cedulaValida = /^[0-9]{7,9}$/.test(cedula);
 
     if (edad < 18) {
